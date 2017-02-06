@@ -1,6 +1,44 @@
 <html>
-testing..
-<img height="500", width="500" th:each="file: ${files}"
-       th:src="${'/data/'+file.name}"></img>
+
+<body>
+
+
+<div th:each="file : ${files}" 
+      th:object="${file}"
+      th:if="${#strings.endsWith(file.name, '.jpg')}">
+  <img th:src="'/data/'+${file.name}"></img>
+       
+</div>
+
+<div th:each="file : ${files}" 
+      th:object="${file}"
+      th:if="${#strings.endsWith(file.name, '.png')}">
+  <img th:src="'/data/'+${file.name}"></img>
+       
+</div>
+
+<div th:each="file : ${files}" 
+      th:object="${file}"
+      th:if="${#strings.endsWith(file.name, '.gif')}">
+  <img th:src="'/data/'+${file.name}"></img>
+       
+</div>
+
+<div th:each="file : ${files}" 
+      th:object="${file}"
+      th:if="${#strings.endsWith(file.name, '.mp4')}">
+  <video  controls>
+    <source th:src="'/data/'+${file.name}" type="video/mp4">
+  </video>
+       
+</div>
+
+
+</div>
+
+
+
+
+</body>
 
 </html>
