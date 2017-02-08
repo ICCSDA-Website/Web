@@ -1,11 +1,13 @@
 <html>
-
+<head th:utext="${head}"></head>
+<body>
 
 <form action="/cms/login" method="post">
 user: <input th:name="user" type="text"></input>
 pass: <input th:name="pass" type="password"> </input> 
 <input type="submit"> </input>
 
+<body>
 </form>
 
 </html>
