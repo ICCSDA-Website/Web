@@ -1,9 +1,9 @@
 <html>
 <head th:utext="${head}"></head>
 <body>
-Welcome: <p th:text="${user}"> <p/>
+Welcome: <p th:text="${#session.getAttribute('sessionUser')}" th:unless="${#session == null}"> <p/>
 
-<a href="/cms/logon">click here to login </a>
+<a th:text="${#session.getAttribute('sessionText')}" th:href="${#session.getAttribute('sessionHref')}" th:unless="${#session== null}">click here to login </a>
 </body>
 
 <html>
