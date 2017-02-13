@@ -1,20 +1,20 @@
 <html>
 <head th:utext="${head}"></head>
-<div class="row">
-	<div class="col-md-4">
+<div class="container-fluid">
+<div class="row" style="background-color: seashell">
+	<div class="col-md-2">
 	<img class="img-responsive" src="/logos/4C_A.png" alt="SDA LOGO">
-	</div>
-	<div class="col-md-8">
-	<h1 class"text-primary">Ilford Central Seventhday Adventis Church</h1>
 	</div>
 </div>
 
+        <h1 class="text-primary text-center"><strong>Ilford Central Seventh-day Adventist church</strong></h1>
+
+
+
+
+
+
 <body>
-
-
-<div class="row">
-
-<div class="col-md-6">
 
 <div th:each="file : ${files}" 
       th:object="${file}"
@@ -46,7 +46,11 @@
        
 </div>
 
-</div>
+<div class="row">
+
+    <div class="col-md-6">
+        <img class="img-responsive" style="border-radius: 10px" src="Pictures/Home page/Building.jpg">
+    </div>
 
 <div class="col-md-6">
 <p>Lorem ipsum dolor sit amet, id esse decore salutatus est, wisi doming copiosae sea ad, affert scaevola praesent no duo. Omnis diceret appareat mea no, legere pertinacia mel at. Ludus affert forensibus est ad. Percipit reprimique suscipiantur mel id. Partiendo definitiones vim no, doming adipiscing et usu, eum id adolescens consectetuer.</p>
@@ -59,11 +63,12 @@
 
 </div>
 
+
+
+
 </div>
 
-
-
-
 </body>
+</div>
 
 </html>
